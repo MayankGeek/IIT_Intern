@@ -1,0 +1,56 @@
+{%load static%}
+{%load crispy_forms_tags%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'index/floating-labels.css'%}"rel="stylesheet">
+  </head>
+
+  <body>
+    <form class="form-signin"action=""method="POST">
+      {%csrf_token%}
+      <div class="text-center mb-2">
+        <img class="mb-4" src="https://www.pikpng.com/pngl/m/589-5897972_usuario-png-register-icon-in-android-clipart.png" alt="" width="60" height="65">
+        <h1 class="h3 mb-3 font-weight-normal">Create Account</h1>
+      </div>
+
+      {{form|crispy}}
+      <button class="btn btn-lg btn-danger btn-block" type="submit">Register</button>
+      
+    </form>
+  </body>
+</html>
+
+
+
+
+
+<!--
+{%load crispy_forms_tags%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <form action=""method="POST">
+    {%csrf_token%}
+  {{form |crispy}}
+  <button class="btn btn-primary" type="submit">Register</button>
+</form>
+</body>
+</html>
+-->
